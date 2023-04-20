@@ -11,7 +11,7 @@ public class Ex04 {
 		ArrayList<String> name = new ArrayList<>();
 		ArrayList<String> phone = new ArrayList<>();
 		String inputName = null, inputPhone = null, 
-				inputId = null, inputPwd = null;
+				inputId = null, inputPwd = null;  //선언
 		int num;
 		while (true) {
 			System.out.println("1.아이디 등록");
@@ -23,7 +23,7 @@ public class Ex04 {
 			num = input.nextInt();
 
 			switch (num) {
-			case 1:
+			case 1: // 아이디 등록
 				System.out.print("아이디 입력 : ");
 				inputId = input.next();
 				System.out.print("비번 입력 : ");
@@ -47,12 +47,13 @@ public class Ex04 {
 				}
 				break;
 
-			case 2:
+			case 2: //아이디 확인
 				System.out.print("아이디 입력 : ");
 				inputId = input.next();
 				System.out.print("비번 입력 : ");
 				inputPwd = input.next();
-				int index1 = id.indexOf(inputId);
+				int index1 = id.indexOf(inputId); //현재 받을 값을 기존값과 확인 
+				                                  //스위치 위로 올리게 되면 개별로 올라가지지 않음
 				if (id.contains(inputId)) {
 					if(pwd.contains(inputPwd)) {
 					System.out.println("비번 : " + pwd.get(index1));
@@ -63,7 +64,7 @@ public class Ex04 {
 				}
 				}
 				break;
-			case 3:
+			case 3: //아이디 삭제
 				System.out.print("아이디 입력 : ");
 				inputId = input.next();
 				System.out.print("비번 입력 : ");
@@ -81,7 +82,7 @@ public class Ex04 {
 					}
 				}
 				break;
-			case 4:
+			case 4: //모든 아이디 확인
 				System.out.println("회원 확인");
 				System.out.print("아이디 입력 : ");
 				inputId = input.next();
@@ -99,7 +100,7 @@ public class Ex04 {
 					}
 				}
 				break;
-			case 5:
+			case 5: //종료
 				System.out.println("종료");
 				System.exit(1);
 			}
